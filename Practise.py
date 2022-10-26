@@ -1,2 +1,9 @@
-Num = 0.1 + 0.2
-print(f"Hello World!\n{Num}")
+motorcycle = ['honda', 'yamaha', 'suzuki', 'yamaha']
+
+first = 'yamaha'
+
+motorcycle.remove(first)
+
+print()
+print(f"{motorcycle}\n{first}")
+print()
