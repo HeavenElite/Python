@@ -1,9 +1,7 @@
-motorcycle = ['honda', 'yamaha', 'suzuki', 'yamaha']
+countries = ['China', 'USA', 'JP', 'Russia']
 
-first = 'yamaha'
+print(f'The nations here were {countries[0]}, {countries[1]} and {countries[2]}.\nBut {countries.pop(2)} is falling.')
 
-motorcycle.remove(first)
+countries.append('France')
 
-print()
-print(f"{motorcycle}\n{first}")
-print()
+print(f'So, Let us welcome {countries[3]}.')
