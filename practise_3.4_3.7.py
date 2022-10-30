@@ -1,7 +1,7 @@
 frute = ['Apple', 'Banana', 'Pear']
 countries = ['China', 'USA', 'JP', 'Russia',frute]
 
-print(f'The nations here were {countries[0]}, {countries[1]} and {countries[2]}.\nBut {countries.pop(2)} is falling.')
+print(f'The nations here were {countries[0]}, {countries[1]} and {countries[2]}.\nBut {countries.pop(2)} is falling. So, we will have {len(countries)} nations on the Earth.')
 
 countries.append('France')
 countries.insert(0,'Qing')
