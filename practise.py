@@ -1,7 +1,14 @@
-magicians = ['alice', 'david', 'carolina']
+squares = []
+for value in range(1, 6):
+    square = value ** 3
+    squares.append(square)
 
-for magician in magicians:
-    print(f'{magician.title()}, that was a great trick!')
-    print(f'I can not wait to see you next trick, {magician.title()}.\n')
+print(squares)
 
-print(f'Thank you, everyone. That was a great magic show!\n')
+for count in range(1, 6):
+    squares.insert(count - 1, count ** 3)
+
+print(squares)
+print(max(squares))
+print(min(squares))
+print(sum(squares))
