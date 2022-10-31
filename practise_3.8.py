@@ -30,3 +30,4 @@ print()
 
 print(len(travel_destinations))
 print(travel_destinations[6])
+print(travel_destinations)
