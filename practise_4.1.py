@@ -1,4 +1,4 @@
-pizza = ['meet', 'frute', 'vegetable']
+pizza = ['meet', 'frute'.title(), 'vegetable']
 
 for material in pizza:
     print(f'I like {material} pizza very much! \n')
