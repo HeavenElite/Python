@@ -1,15 +1,15 @@
 ﻿age = 33
 art = 'a'
 
-if age < 2:
+if (age < 2):
     title = 'Baby'
-elif age >= 2 and age < 4:
+elif (age >= 2) and (age < 4):
     title = 'Kid'
-elif age >=4 and age < 13:
+elif age >=4 and (age < 13):
     title = 'Child'
-elif age >= 13 and age < 20:
+elif (age >= 13) and (age < 20):
     title = 'Teenage'
-elif age >= 20 and age < 65:
+elif (age >= 20) and (age < 65):
     title = 'Adult'
     art = 'an'
 else:
