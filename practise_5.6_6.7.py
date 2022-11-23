@@ -5,7 +5,7 @@ if (age < 2):
     title = 'Baby'
 elif (age >= 2) and (age < 4):
     title = 'Kid'
-elif age >=4 and (age < 13):
+elif (age >= 4) and (age < 13):
     title = 'Child'
 elif (age >= 13) and (age < 20):
     title = 'Teenage'
