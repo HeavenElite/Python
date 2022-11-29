@@ -47,3 +47,25 @@ while active:
     else:
         print("\nGood Bye~\n")
         break
+
+    # Practise 7-9
+
+sandwich_orders = ['Banana', 'pastrami', 'Apple', 'pastrami', 'Pear', 'pastrami']
+finished_sandwiches = []
+
+print("\nPastrami has been used up.")
+
+while 'pastrami' in sandwich_orders:
+    sandwich_orders.remove('pastrami')
+
+print("\nPastrami orders are all cancelled.\n")
+
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop(0)
+    finished_sandwiches.append(current_sandwich)
+    print(f"{current_sandwich} is ready for delivery.")
+
+
+print("\nThe following sandwiches are all ready.\n")
+for sandwich in finished_sandwiches:
+    print(f"{sandwich.title()}")
