@@ -48,7 +48,7 @@ while active:
         print("\nGood Bye~\n")
         break
 
-    # Practise 7-9
+# Practise 7-9
 
 sandwich_orders = ['Banana', 'pastrami', 'Apple', 'pastrami', 'Pear', 'pastrami']
 finished_sandwiches = []
@@ -69,3 +69,31 @@ while sandwich_orders:
 print("\nThe following sandwiches are all ready.\n")
 for sandwich in finished_sandwiches:
     print(f"{sandwich.title()}")
+
+# Practise 7-10
+
+vocations = {}
+active = True
+
+while active:
+
+    name = input("\nPlease tell me you name:\n")
+    name = name.lower()
+
+    resort = input("\nWhere would you plan to go?\n")
+    resort = resort.lower()
+
+    vocations[name] = resort
+
+    stop = input("\nIs there any people on vocation? (Yes/No)\n")
+    stop = stop.lower()
+
+    if stop == 'no':
+        active = False
+        print()
+
+        
+for name, resort in vocations.items():
+    print(f"{name.title()}'s favorite place is {resort.upper()}.")
+
+print()
