@@ -36,3 +36,20 @@ for name, nation in resorts.items():
     describe_city(nation=nation, name=name)
 
 print()
+
+## Practise 8-6
+
+def city_country(city, nation):
+    """返回城市字符串"""
+    formated_string = f"{city.title()}, {nation.title()}"
+    return formated_string
+
+city_data = {
+    'beijing': 'china',
+    'shanghai': 'china',
+    'new york': 'united states',
+    }
+
+for city, country in city_data.items():
+    feedback = city_country(city, country)
+    print(feedback)
