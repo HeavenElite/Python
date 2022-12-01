@@ -53,3 +53,38 @@ city_data = {
 for city, country in city_data.items():
     feedback = city_country(city, country)
     print(feedback)
+
+## Practise 8-8
+#- lower()不要写成lower，方法也要加圆括号
+#- while成功终止后，要有print()说明循环已成功终止，或者感谢用户的配合。
+
+def make_album(singer, album, number = 0):
+    """生成音乐集"""
+    if number:
+        music = {
+            'singer': singer.title(),
+            'album': album.title(),
+            'number': number,
+            }
+    else:
+        music = {
+            'singer': singer.title(),
+            'album': album.title(),
+            }
+
+    return music
+
+active = True
+
+while active:
+    singer = input("\nPlease tell me your favorite singer's name:\n")
+    if singer.lower() == 'quit':
+        break
+    album  = input("\nWhat is your favorite album?\n")
+    if album.lower() == 'quit':
+        break
+
+    formated_data = make_album(singer, album)
+    print(f"\n{formated_data}\n")
+
+print("\nThanks for responsding!\n")
