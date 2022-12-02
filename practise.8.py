@@ -88,3 +88,60 @@ while active:
     print(f"\n{formated_data}\n")
 
 print("\nThanks for responsding!\n")
+
+## Practise 8-10
+#- 复习第七章，修改列表数据，使用while循环
+
+def delivery_message(information):
+    """输出消息"""
+    while information:
+        infor = information.pop(0)
+        print(f"\n{infor}\n")
+        send_messages.append(infor)
+
+send_messages = []
+information = [
+    "It's a good day.",
+    "Are you OK?",
+    "Good morning~"
+    ]
+
+delivery_message(information)
+
+print(information)
+print(send_messages)
+
+## Practise 8-12
+
+def collect_material(*args):
+    """收集单值实参"""
+    print(f"\nBelow is the material you ordered:")
+    for material in args:
+        print(f"\t- material")
+
+
+collect_material('apple')
+
+## Practise 8-13
+
+def build_profile(firstname, lastname, **user_info):
+    """生成字典"""
+    user_info['firstname'] = firstname
+    user_info['lastname'] = lastname
+    
+    return user_info
+
+user_info = build_profile('james', 'brone', location = 'beijing', website = 'www.baidu.com')
+print(user_info)
+
+## Practise 8-14
+
+def make_car(brand, model, **kwargs):
+    kwargs['brand'] = brand
+    kwargs['model'] = model
+
+    return kwargs
+
+car_info = make_car('subara', 'outback', color='blue', tow_package=True)
+print(car_info)
+
