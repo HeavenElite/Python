@@ -58,7 +58,7 @@ for city, country in city_data.items():
 #- lower()不要写成lower，方法也要加圆括号
 #- while成功终止后，要有print()说明循环已成功终止，或者感谢用户的配合。
 
-def make_album(singer, album, number = 0):
+def make_album(singer, album, number=0):
     """生成音乐集"""
     if number:
         music = {
@@ -131,7 +131,7 @@ def build_profile(firstname, lastname, **user_info):
     
     return user_info
 
-user_info = build_profile('james', 'brone', location = 'beijing', website = 'www.baidu.com')
+user_info = build_profile('james', 'brone', location='beijing', website='www.baidu.com')
 print(user_info)
 
 ## Practise 8-14
