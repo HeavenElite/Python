@@ -1,3 +1,5 @@
+## 复习 1
+
 def formatted_name(givenname='qi', sirname='nie', middlename=None):
     """返回整洁的姓名"""
     if middlename:
@@ -24,6 +26,8 @@ while True:
     print(f"\nYour full name is {full_name}.\n")
 
 
+## 复习 2
+
 def greet_users(names=['lauris']):
     """向列表中每位用户发出简单问候"""
     for name in names:
@@ -32,3 +36,4 @@ def greet_users(names=['lauris']):
 
 usernames = ['hannah', 'ty', 'margot']
 greet_users(usernames)
+
