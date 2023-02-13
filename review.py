@@ -1,3 +1,32 @@
+## 复习 4
+
+def make_pizza(location, toppings='Meet', service='normal'):
+    """打印顾客点的所有配料"""
+    print()
+    print(f"User service Level is: {service.title()}.")
+    print(f"User location is: {location.title()}.")
+    print(f"User topppings are: ", end='')
+    for topping in toppings:
+        print(topping.title(), end=', ')
+    print("\n")
+
+make_pizza('Beijing', service='VIP')
+
+
+## 复习 3
+
+def make_pizza(location, *toppings, service='normal'):
+    """打印顾客点的所有配料"""
+    print()
+    print(f"User service Level is: {service.title()}.")
+    print(f"User location is: {location.title()}.")
+    print(f"User topppings are:", end=' ')
+    for topping in toppings:
+        print(topping.title(), end=', ')
+    print("\n")
+
+make_pizza('Beijing', 'Apple', 'Banada', service='VIP')
+
 ## 复习 2
 
 def greet_users(names=['lauris']):
