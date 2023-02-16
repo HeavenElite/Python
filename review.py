@@ -1,3 +1,18 @@
+## 复习 5
+
+def make_pizza(location, *toppings, service, nation='China', **customers):
+    """打印顾客点的所有配料"""
+    print()
+    print(f"User service level is: {service.title()}.")
+    print(f"User location is: {location.title()}.")
+    print(f"User nation is: {nation.title()}.")
+    print(f"User topppings are:", end=' ')
+    for topping in toppings:
+        print(topping.title(), end=', ')
+    print("\n")
+
+make_pizza('Beijing', 'Apple', 'Banada', nation='USA', service='VIP')
+
 ## 复习 4
 
 def make_pizza(location, toppings='Meet', service='normal'):
