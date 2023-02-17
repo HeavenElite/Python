@@ -1,3 +1,15 @@
+## 复习 6
+
+alien = {
+
+}
+key = 'color'
+value = 'green'
+
+alien[key] = value
+
+print(alien.get('name',))
+
 ## 复习 5
 
 def make_pizza(location, *toppings, service, nation='China', **customers):
@@ -9,9 +21,12 @@ def make_pizza(location, *toppings, service, nation='China', **customers):
     print(f"User topppings are:", end=' ')
     for topping in toppings:
         print(topping.title(), end=', ')
+    print("\nUser name is ", end='')
+    for first_name, last_name in customers.items():
+        print(f"{first_name.title()} {last_name.title()}, ", end='')
     print("\n")
 
-make_pizza('Beijing', 'Apple', 'Banada', nation='USA', service='VIP')
+make_pizza('Beijing', 'Apple', 'Banada', nation='USA', service='VIP', lauris='nie', james='zhang')
 
 ## 复习 4
 
