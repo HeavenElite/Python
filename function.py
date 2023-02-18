@@ -11,3 +11,8 @@ def make_pizza(location, *toppings, service, nation='China', **customers):
     for first_name, last_name in customers.items():
         print(f"{first_name.title()} {last_name.title()}, ", end='')
     print("\n")
+
+def make_pizza(*args, **kwargs):
+    """测试函数"""
+    print(args)
+    print(kwargs)

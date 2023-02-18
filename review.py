@@ -1,4 +1,4 @@
-## 复习 6
+## 复习 7
 
 alien = {
 
@@ -9,6 +9,15 @@ value = 'green'
 alien[key] = value
 
 print(alien.get('name',))
+
+## 复习 6
+
+import Function as f
+
+f.make_pizza(
+    'Beijing', 'Apple', 'Banada', '123',
+    nation='USA', lauris='nie', james='zhang', service='VIP'
+    )
 
 ## 复习 5
 
