@@ -1,3 +1,24 @@
+## 复习 9
+#  修改列表中的列表，及其元素：
+
+name = 'lauris'
+name_list = ['a', 'b', 'c', [1, 2, 3], name.title()]
+print(name_list)
+
+name_cut  = name_list[:] 
+name_cut[3][0] = 6
+print(name_cut)
+print(name_list)
+
+## 复习 8
+
+import function as module
+
+module.make_pizza(
+    'Beijing', 'Apple', 'Banada', '123',
+    nation='USA', lauris='nie', james='zhang', service='VIP'
+    )
+
 ## 复习 7
 
 alien = {
