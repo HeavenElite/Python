@@ -12,7 +12,7 @@ print(alien.get('name',))
 
 ## 复习 6
 
-import Function as f
+import function as f
 
 f.make_pizza(
     'Beijing', 'Apple', 'Banada', '123',
