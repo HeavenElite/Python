@@ -12,7 +12,7 @@ print(name_list)
 
 ## 复习 8
 
-import function as module
+import functions as module
 
 module.make_pizza(
     'Beijing', 'Apple', 'Banada', '123',
@@ -33,7 +33,7 @@ print(alien.get('name',))
 
 ## 复习 6
 
-import function as f
+import functions as f
 
 f.make_pizza(
     'Beijing', 'Apple', 'Banada', '123',
