@@ -1,4 +1,117 @@
-## 联系 3
+## 练习 9-5
+class User:
+    """练习 9-5"""
+
+    def __init__(self):
+        """初始化属性"""
+        self.login_attempts = 0
+
+    def increment_login_attempts(self):
+        """将属性值加1"""
+        self.login_attempts += 1
+    
+    def reset_login_attempts(self):
+        """重置属性值"""
+        self.login_attempts = 0
+
+user  = User()
+count = 0
+while count <= 10:
+    user.increment_login_attempts()
+    count += 1
+user.reset_login_attempts()
+print(user.login_attempts)
+
+
+## 练习 9-4
+class Restaurant:
+    """练习 9-4"""
+
+    def __init__(self):
+        """初始化属性"""
+        self.number_served   = 0
+
+    def set_number_served(self, customized_number):
+        """设置就餐人数"""
+        self.number_served = customized_number
+
+    def increment_number_served(self, increased_number):
+        """将就餐人数递增"""
+        self.number_served += increased_number
+
+restaurant = Restaurant()
+
+restaurant.set_number_served(10)
+restaurant.increment_number_served(100)
+print(restaurant.number_served)
+
+## 实例 2
+class Car:
+    """一次模拟汽车的简单尝试"""
+
+    def __init__(self, make, model, year):
+        """初始化描述汽车的属性"""
+        self.name = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descriptive_name(self):
+        """返回整洁的描述信息"""
+        long_name  = f"{self.year} {self.name} {self.model} "
+        long_name += f"{self.odometer_reading}"
+        return long_name
+    
+    def read_odometer(self):
+        """打印一条指出汽车历程的消息"""
+        print(f"This car has {self.odometer_reading} miles on it.")
+
+    def update_odometer(self, mileage):
+        """
+        重置里程表数值
+        禁止将里程表读数回调
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer")
+
+    def increment_odometer(self, miles):
+        """将里程表读数增加指定的量"""
+        self.odometer_reading += miles
+
+my_old_car = Car('audi', 'a4', '2019')
+my_new_car = Car('audi', 'a4', '2019')
+
+my_new_car.odometer_reading = 23
+my_new_car.year = 2023
+my_new_car.increment_odometer(1_000)
+
+print(my_old_car.get_descriptive_name())
+print(my_new_car.get_descriptive_name())
+my_new_car.read_odometer()
+
+## 实例 1
+
+class Car:
+    """一次模拟汽车的简单尝试"""
+
+    def __init__(self, make, model, year):
+        """初始化描述汽车的属性"""
+        self.name = make
+        self.model = model
+        self.year = year
+
+    def get_descriptive_name(self):
+        """返回整洁的描述信息"""
+        long_name = f"{self.year} {self.name} {self.model}"
+        return long_name.title()
+    
+my_new_car = Car('audi', 'a4', '2019')
+print(my_new_car.get_descriptive_name())
+
+
+## 练习 3
 
 class User:
     """练习 9-3"""
