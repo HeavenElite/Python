@@ -1,3 +1,85 @@
+## 练习 2 3
+
+from random import choice
+
+class Lottery:
+    """一个模拟彩票的类."""
+
+    def __init__(self):
+        """初始化字符属性"""
+        self.characters = [
+            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E'
+            ]
+        self.results = []
+
+    def lotto(self):
+        """
+        从列表中抽取 4 个数字或字母, 并打印消息.
+        """
+        self.results = []
+        count  = 1
+        while count <= 4:
+            temp = choice(self.characters)
+            self.results.append(temp)
+            count += 1
+
+
+jan_lottery = Lottery()
+jan_lottery.lotto()
+
+print()
+print(f"If the numbers in your ticket are:")
+for number in jan_lottery.results:
+    print(f"{number} ", end='')
+print()
+print(f"You Win the Lottery!\n")
+
+sample = jan_lottery.results
+again  = []
+count  = 1
+
+while again != sample:
+    jan_lottery.lotto()
+    again = jan_lottery.results
+    count += 1
+
+print(f"After {count} times of circulation, you win it again.")
+
+## 练习 9-13
+
+from random import choice, randint
+
+class Die:
+    """模拟投掷骰子的类."""
+
+    def __init__(self, sides=6):
+        """初始化面数 sides 属性."""
+        self.sides = sides
+        self.result = 6
+
+    def roll_dice(self):
+        """掷 10 次骰子的结果."""
+
+# 使用 choice() 函数的方法
+#       list_six = list(range(1, self.sides+1))
+#       count_six = 1
+#       while count_six != 11:
+#           result = choice(list_six)
+#           count_six +=1
+#       self.result = result
+#       return result
+
+# 使用 randint() 函数的方法
+        count_six = 1
+        while count_six != 11:
+            self.result = randint(1, self.sides)
+            count_six +=1
+        return self.result
+
+die_one = Die(20)
+print(die_one.result)
+print(die_one.roll_dice())
+
 ## 练习 9-9
 
 class Car:

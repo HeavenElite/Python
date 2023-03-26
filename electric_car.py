@@ -36,6 +36,7 @@ class ElectriCar(Car):
         """
         super().__init__(make, model, year)
         self.battery = Battery()
+        self.odometer_reading = 888
 
     def fill_gas_tank(self):
         """电动车没有邮箱"""
