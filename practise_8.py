@@ -117,7 +117,7 @@ def collect_material(*args):
     """收集单值实参"""
     print(f"\nBelow is the material you ordered:")
     for material in args:
-        print(f"\t- material")
+        print(f"\t{material}")
 
 
 collect_material('apple')

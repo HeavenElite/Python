@@ -22,3 +22,14 @@ def make_pizza(*args, **kwargs):
     print(kwargs)
 
 
+def build_dictionary():
+    """"Build a dictionary by user inputings."""
+    flag = 'start'
+    dictionary = {}
+    while flag != 'stop':
+        key = input("Please provide the Key:\n")
+        value = input("Please provide the value:\n")
+        dictionary[key] = value
+        flag = input("Continue to add? Input 'Stop' to quit.\n")
+        flag = flag.lower()
+    return dictionary

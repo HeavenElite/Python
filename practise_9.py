@@ -1,3 +1,36 @@
+## 复习自编写例子
+
+class Outputname:
+    """
+    练习
+    """
+    def __init__(self, family_name, given_name='china'):
+        self.family_name = family_name.lower()
+        self.given_name = given_name.lower()
+
+    def output_name(self, middle_name):
+        print(f"The name is {self.family_name.title()} "
+              f"{middle_name.title()}")
+        
+
+class Outputallname(Outputname):
+    """
+    练习
+    """
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
+        super().__init__(self.first)
+        
+
+    def output_shortname(self, china):
+        super().output_name(china)
+
+
+person = Outputallname('edison', 'china')
+person.output_shortname('china')
+
+
 ## 练习 2 3
 
 from random import choice
