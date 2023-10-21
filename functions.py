@@ -1,3 +1,46 @@
+# 记录在练习中所使用过的函数
+
+def input_collection():
+    """搜集用户提供的浮点数并返回"""
+    while True:
+        try:
+            number = input("Please provide a number:\n")
+            number = float(number)
+        except:
+            print("Please provde a number instead of words.\n")
+            continue
+        else:
+            break
+    return number
+        
+
+
+def quit_confirmation():
+    """询问用户是否退出程序"""
+    prompt  = "Do you want to continue this program?\n"
+    prompt += "If you don't, please input q or Q\n"
+    confirm = input(prompt)
+    check_confirm = confirm.lower()
+
+    if check_confirm != 'q':
+        confirm = 'continue'
+    elif check_confirm == 'q':
+        confirm = 'quit'
+    return confirm
+
+def count_words(filename):
+    """计算一个文件包含多少个单词"""
+    try:
+        with open(filename, encoding='utf-8') as f:
+            contents = f.read()
+    except FileNotFoundError:
+        print(f"Sorry, the file {filename} does not exsits.")
+    else:
+        words = contents.split()
+        num_words = len(words)
+    return num_words
+
+
 def make_pizza(
         location, *toppings, service,
         nation='China', **customers):

@@ -1,3 +1,24 @@
+# 练习 10-6 & 10-7
+
+import functions
+
+welcom_prompt  = "\nThis calculator will plus two numbers.\n"
+welcom_prompt += "Are you ready?\n"
+print(welcom_prompt)
+
+while True:
+    first_number = functions.input_collection()
+    second_number = functions.input_collection()
+    result = first_number + second_number
+    print(f"The result is {result}")
+
+    answer = functions.quit_confirmation()
+    if answer == 'quit':
+        break
+    elif answer == 'continue':
+        continue
+
+
 # 练习 10.3~5
 
 record_file = 'guest.txt'
