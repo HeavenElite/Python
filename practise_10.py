@@ -1,3 +1,29 @@
+# 练习 10-12
+
+import json
+
+prompt   = "\nPleas tell me your favorite number:\n"
+number   = input(prompt)
+filename = 'number.json'
+
+try:
+    with open(filename) as f:
+        numbers = json.load(f)
+except FileNotFoundError:
+    with open(filename, 'w') as f:
+        numbers = []
+        numbers.append(number)
+        json.dump(numbers, f)
+        print(f"Your number, {number} is now added in list")
+else:
+    if number not in numbers:
+        numbers.append(number)
+        with open(filename, 'w') as f:
+            json.dump(numbers, f)
+    elif number in numbers:
+        print(f"Your number, {number} is already in list.")
+
+
 # 练习 10-6 & 10-7
 
 import functions
