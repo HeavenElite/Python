@@ -1,5 +1,12 @@
 """练习使用的函数汇总"""
 
+
+def get_formatted_name(first, last):
+    """生成整洁的姓名"""
+    full_name = f"{first} {last}"
+    return full_name.title()
+    
+
 def input_collection():
     """搜集用户提供的浮点数并返回"""
     while True:
@@ -12,7 +19,6 @@ def input_collection():
         else:
             break
     return number
-        
 
 
 def quit_confirmation():
